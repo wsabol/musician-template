@@ -15,26 +15,26 @@ export default props =>
             up with your Big Jazz Boy bugle blasts from below. I am so grateful to know this about you!
           </article>
           <blockquote>
-            <span class="quote-body">
+            <span className="quote-body">
               So many notes!
             </span>
-            <span class="quote-signature">
+            <span className="quote-signature">
               Joe Blow
             </span>
           </blockquote>
           <blockquote>
-            <span class="quote-body">
+            <span className="quote-body">
               The one; the only.
             </span>
-            <span class="quote-signature">
+            <span className="quote-signature">
               This guy
             </span>
           </blockquote>
           <blockquote>
-            <span class="quote-body">
+            <span className="quote-body">
               WOW
             </span>
-            <span class="quote-signature">
+            <span className="quote-signature">
               That guy
             </span>
           </blockquote>

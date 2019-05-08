@@ -30,7 +30,7 @@ export default props =>
           <table className="table is-striped is-hoverable is-fullwidth">
             <thead>
               <tr>
-                {Object.keys(links[0]).map(h => (h === 'href' ? '' : <th>{h}</th>))}
+                {Object.keys(links[0]).map(h => (h === 'href' ? null : <th>{h}</th>))}
               </tr>
             </thead>
             <tbody>
@@ -38,7 +38,7 @@ export default props =>
                 <tr>
                   {Object.keys(links[0]).map(h => {
                     if ( h === 'href' )
-                      return ''
+                      return null
                     else if ( h === 'track' )
                       return <td><a href={lnk.href}>{lnk[h]}</a></td>
                     else
