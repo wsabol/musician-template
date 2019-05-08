@@ -1,0 +1,171 @@
+/* colors */
+.is-transparent {
+  background: transparent;
+  background-color: rgba(0,0,0,0);
+}
+.hidden {
+  display: none !important;
+}
+
+/* typo */
+#home .title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-align: center;
+  margin-top: 60px;
+  color: #fafafa;
+}
+#home .subtitle {
+  text-align: center;
+  font-family: monospace;
+  color: #fafafa;
+}
+blockquote {
+  border-left: 2px solid #333;
+  display: block;
+  margin: 2rem 1em;
+  padding: 1rem 0;
+}
+blockquote:before {
+  margin-top: -1rem;
+  padding-left: 0.5rem;
+  position: absolute;
+  content: open-quote;
+  font-family: "Georgia", serif;
+  font-style: normal;
+  font-size: 5rem;
+  color: #00d1b2;
+}
+blockquote .quote-body {
+  display: inline-block;
+  padding-left: 3rem;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  color: #333;
+  text-align: left;
+}
+blockquote .quote-signature {
+  padding: 0 4rem;
+  display: inline-block;
+  font-style: italic;
+  color: #333;
+  opacity: 0.8;
+}
+
+/*layout*/
+html {
+  height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  color: #212121;
+  background-color: #fafafa;
+  background-image: url('/IMG_0079.JPG');
+  background-size: cover;
+  height: 100%;
+}
+.app {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.app-content {
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  height: 100%;
+}
+.app-body {
+  width: 100%;
+  position: relative;
+  min-height: 0;
+  transition: background-color 0.2s ease;
+}
+.app-body.overlay {
+  background-color: rgba(255, 255, 255, 0.6)
+}
+
+/* nav */
+.app-header .navbar-start {
+  margin: 0 auto;
+}
+.app-header .navbar-end {
+  margin: 0;
+}
+.app-header .navbar-item {
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#watch-frame {
+  padding: 17px 0px;
+  height: auto;
+  clear: both;
+  position: relative;
+}
+#watch-frame .frame-outer {
+  max-width: 100%;
+  position: relative;
+}
+#watch-frame .frame-inner {
+  padding-bottom: 56.2%;
+}
+#watch-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  #watch-frame {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #watch-frame {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  #watch-frame {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media screen and (min-width: 1088px) {
+  .app-header .navbar-end {
+    position: absolute;
+    right: 0;
+  }
+  #home {
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem 1rem;
+  }
+  #home .title {
+    text-align: left;
+  }
+  #home .subtitle {
+    text-align: left;
+  }
+  .hero.is-section .hero-body {
+    padding-top: 6rem;
+  }
+}

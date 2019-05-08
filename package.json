@@ -1,10 +1,12 @@
 {
-  "name": "music",
+  "name": "musician-template",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bulma": "^0.7.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-grid-gallery": "^0.5.4",
     "react-scripts": "3.0.0"
   },
   "scripts": {
