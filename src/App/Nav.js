@@ -1,5 +1,5 @@
 import React from 'react'
-import Burger from '../modules/Burger'
+import Burger from './Burger'
 
 export default class extends React.Component {
   constructor(props) {
@@ -12,22 +12,23 @@ export default class extends React.Component {
   }
   render() {
     return (
-      <nav className="navbar is-transparent app-header is-fixed-top">
+      <nav className="navbar is-transparent app-header">
         <div className="navbar-brand">
           <Burger target="navbar" ref={this.burgerNode} />
         </div>
         <div id="navbar" className="navbar-menu">
           <div className="navbar-start">
-            <a onClick={this.navClick} className="navbar-item" href="javscript:;" page="home">Home</a>
-            <a onClick={this.navClick} className="navbar-item" href="javscript:;" page="about">About</a>
-            <a onClick={this.navClick} className="navbar-item" href="javscript:;" page="listen">Listen</a>
-            <a onClick={this.navClick} className="navbar-item" href="javscript:;" page="watch">Watch</a>
-            <a onClick={this.navClick} className="navbar-item" href="javscript:;" page="look">Look</a>
+            <a onClick={this.navClick} className="navbar-item" href="#home">Home</a>
+            <a onClick={this.navClick} className="navbar-item" href="#about">About</a>
+            <a onClick={this.navClick} className="navbar-item" href="#listen">Listen</a>
+            <a onClick={this.navClick} className="navbar-item" href="#watch">Watch</a>
+            <a onClick={this.navClick} className="navbar-item" href="#look">Look</a>
+            <a onClick={this.navClick} className="navbar-item" href="#gear">Gear</a>
           </div>
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons is-centered">
-                <a onClick={this.navClick} className="button is-primary" href="javscript:;" page="contact">
+                <a onClick={this.navClick} className="button is-link" href="#contact">
                   <strong>contact</strong>
                 </a>
               </div>

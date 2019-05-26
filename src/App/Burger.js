@@ -25,9 +25,7 @@ export default class extends React.Component {
     }
 
     return (
-      <div className={"navbar-burger burger" + (this.state.active ? ' is-active' : '')} onClick={this.toggle} >
-        <span></span>
-        <span></span>
+      <div className={"navbar-menu-toggle" + (this.state.active ? ' is-active' : '')} onClick={this.toggle} >
         <span></span>
       </div>
     );

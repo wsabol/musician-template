@@ -2,9 +2,12 @@ import React from 'react'
 
 export default props =>
   <section className="section animated fadeIn" id="about">
-    <div className="hero is-section">
+    <div className="hero">
       <div className="hero-body" >
         <div className="container">
+          <article>
+            Drummer Will Sabol is always ready lay down some thick groove and have a great time.
+          </article>
           <article>
             You are a tremendous Big Jazz Boy. You blast huge on the bugles and it never ends for you.
             You are in love with the Jazz! When the drums are tap-tap-tapping, and the upright bass is
@@ -16,10 +19,10 @@ export default props =>
           </article>
           <blockquote>
             <span className="quote-body">
-              So many notes!
+              More pocket than cargo shorts.
             </span>
             <span className="quote-signature">
-              Joe Blow
+              McIan Amos
             </span>
           </blockquote>
           <blockquote>
@@ -27,15 +30,15 @@ export default props =>
               The one; the only.
             </span>
             <span className="quote-signature">
-              This guy
+              Sean Rodriguez
             </span>
           </blockquote>
           <blockquote>
             <span className="quote-body">
-              WOW
+              Steve Gladd's Cone
             </span>
             <span className="quote-signature">
-              That guy
+              Ryan Patrick
             </span>
           </blockquote>
         </div>

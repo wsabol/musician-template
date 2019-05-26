@@ -14,15 +14,28 @@ export default class extends React.Component {
   handleFormSubmit = (e) => {
     e.preventDefault();
     console.log({action: 'email', ...this.state});
-    /* callback */
-    this.setState({ mailSent: true });
-    window.setTimeout(() => this.setState({
-      name: '',
-      email: '',
-      message: '',
-      mailSent: false,
-      error: null
-    }), 2000);
+    if ( this.state.name.trim() !== '' && this.state.email.trim() !== '' ) {
+      fetch(process.env.REACT_APP_API_SERVER+"api/contact.json.php", {
+        method: 'post',
+        body: JSON.stringify({action: 'email', ...this.state})
+      })
+        .then(res => res.json())
+        .then((res) => {
+            console.log(res);
+            this.setState({ mailSent: res.sent });
+            window.setTimeout(() => this.setState({
+              name: '',
+              email: '',
+              message: '',
+              mailSent: false,
+              error: null
+            }), 2000);
+          },
+          (error) => {
+            console.error(error)
+          }
+        )
+    }
   }
   render() {
     return (

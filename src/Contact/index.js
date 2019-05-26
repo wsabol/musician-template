@@ -1,9 +1,9 @@
 import React from 'react'
-import ContactForm from '../modules/ContactForm.js'
+import ContactForm from './ContactForm'
 
 export default props =>
   <section className="section animated fadeIn">
-    <div className="hero is-section">
+    <div className="hero">
       <div className="hero-body" >
         <div className="container">
           <div className="columns">

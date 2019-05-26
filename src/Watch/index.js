@@ -1,18 +1,19 @@
 import React from 'react'
 
 const youtubeIds = [
-  'k3UisJPtdUk',
-  'Wp0Sd_z0Lxg',
-  'sQnoZUR6fvY'
+  '_4S9rCy7Jgs',
+  'kYuC8FYIA7g',
+  'TK_oxASgW7c',
+  'OWxQI_Qvq3o'
 ]
 
 export default props =>
   <section className="section animated fadeIn">
-    <div className="hero is-section">
+    <div className="hero">
       <div className="hero-body" >
         <div className="container has-text-centered">
-          {youtubeIds.map(id =>
-            <div id="watch-frame">
+          {youtubeIds.map((id, i) =>
+            <div id="watch-frame" key={i} >
               <div className="frame-outer">
                 <div className="frame-inner">
                   <iframe src={"//www.youtube.com/embed/"+id} title={id}

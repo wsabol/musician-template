@@ -14,12 +14,13 @@
   letter-spacing: 8px;
   text-align: center;
   margin-top: 60px;
-  color: #fafafa;
 }
 #home .subtitle {
   text-align: center;
   font-family: monospace;
-  color: #fafafa;
+}
+article {
+  margin-bottom: 10px;
 }
 blockquote {
   border-left: 2px solid #333;
@@ -53,44 +54,40 @@ blockquote .quote-signature {
   opacity: 0.8;
 }
 
+/* img */
+figure img.cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 /*layout*/
 html {
   height: 100%;
-  position: relative;
+  overflow: hidden;
 }
 body {
   margin: 0;
   overflow: hidden;
   color: #212121;
   background-color: #fafafa;
-  background-image: url('/IMG_0079.JPG');
+  background-image: url('/assets/background.jpg');
   background-size: cover;
-  height: 100%;
-}
-.app {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0;
+  height: 100vh;
 }
 .app-content {
   box-shadow: none;
   padding: 0;
-  display: flex;
-  height: 100%;
+  height: 100vh;
+  overflow: auto;
+  transition: background-color 0.2s ease;
+}
+.app-content.overlay {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .app-body {
   width: 100%;
-  position: relative;
   min-height: 0;
-  transition: background-color 0.2s ease;
-}
-.app-body.overlay {
-  background-color: rgba(255, 255, 255, 0.6)
 }
 
 /* nav */
@@ -105,6 +102,33 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+.navbar-menu {
+  position: absolute;
+  width: 100%;
+}
+
+/* menu toggle */
+.navbar-menu-toggle {
+  color: #4a4a4a;
+  cursor: pointer;
+  display: block;
+  height: 3.25rem;
+  width: auto;
+  margin: 0 auto;
+  text-transform: uppercase;
+  padding: 0.875rem;
+  width: 5rem;
+  text-align: center;
+}
+.navbar-menu-toggle span:after {
+  content: 'Menu';
+}
+.navbar-menu-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.navbar-menu-toggle.is-active span:after {
+  content: 'Close';
 }
 
 #watch-frame {
@@ -150,9 +174,16 @@ body {
 }
 
 @media screen and (min-width: 1088px) {
+  .navbar-menu {
+    position: static;
+    width: auto;
+  }
   .app-header .navbar-end {
     position: absolute;
     right: 0;
+  }
+  .navbar-menu-toggle {
+    display: none;
   }
   #home {
     position: absolute;
@@ -164,8 +195,5 @@ body {
   }
   #home .subtitle {
     text-align: left;
-  }
-  .hero.is-section .hero-body {
-    padding-top: 6rem;
   }
 }
