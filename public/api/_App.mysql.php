@@ -7,11 +7,11 @@ class Application {
 
 	function ConnectToDB( $dbconf ) {
 		#setup the db
-		$UID = $dbconf['user'];
-		$PWD = $dbconf['psw'];
-		$SERVER = $dbconf['host'];
+		$UID = @$dbconf['user'];
+		$PWD = @$dbconf['psw'];
+		$SERVER = @$dbconf['host'];
 		$DATABASE = "saboldru_music";
-    $PORT = $dbconf['port'];
+        $PORT = $dbconf['port'];
 		if ( $PORT <= 0 ) $PORT = ini_get("mysqli.default_port");
 
 		self::$db = new mysqli($SERVER, $UID, $PWD, $DATABASE, $PORT);
@@ -23,10 +23,15 @@ class Application {
 		}
 	}
 	function __construct() {
-		$conf = parse_ini_file($this->expand_tilde("~/server-conf.ini"), true);
-		$this->admin = $conf['admin'];
+		// $conf = parse_ini_file($this->expand_tilde("../../server-conf.ini"), true);
+		// $this->admin = "";
 
-		$this->ConnectToDB($conf['database']);
+        // if (gethostname() == "us4.siteground.us") {
+        //     $this->ConnectToDB($conf['database']);
+        // } else {
+        //     $this->ConnectToDB($conf['database_dev']);
+        // }
+
 		$this->R = json_decode(file_get_contents('php://input'), true);
 	}
 	function expand_tilde($path) {
@@ -41,7 +46,7 @@ class Application {
 		$headers = "MIME-Version: 1.0\r\n";
 		$headers.= "Content-type: text/html; charset=UTF-8\r\n";
 		$headers.= "From: <contactform@willsabol.com>";
-		$sent = mail($this->admin['email'], $subject, $msg, $headers);
+		$sent = mail("wsabol39@gmail.com", $subject, $msg, $headers);
 		return array(
 			'sent' => !!$sent
 		);
