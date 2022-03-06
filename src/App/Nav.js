@@ -23,7 +23,7 @@ export default class extends React.Component {
             <a onClick={this.navClick} className="navbar-item" href="#listen">Listen</a>
             <a onClick={this.navClick} className="navbar-item" href="#watch">Watch</a>
             <a onClick={this.navClick} className="navbar-item" href="#look">Look</a>
-            <a onClick={this.navClick} className="navbar-item" href="#gear">Gear</a>
+            {/*<a onClick={this.navClick} className="navbar-item" href="#gear">Gear</a>*/}
           </div>
           <div className="navbar-end">
             <div className="navbar-item">

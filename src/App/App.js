@@ -37,7 +37,7 @@ class App extends React.Component {
             watch: <Watch />,
             look: <Look />,
             contact: <Contact />,
-            gear: <Gear />
+            // gear: <Gear />
           }[bodyPage]}
         </div>
       </div>
