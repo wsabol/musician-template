@@ -4,10 +4,10 @@
   "private": true,
   "dependencies": {
     "bulma": "^0.7.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-grid-gallery": "^0.5.5",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^3.4.4",
     "react-sound": "^1.2.0",
     "velocity-react": "^1.4.3"
   },
