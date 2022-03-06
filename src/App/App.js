@@ -10,7 +10,7 @@ import Listen from '../Listen'
 import Watch from '../Watch'
 import Look from '../Look'
 import Contact from '../Contact'
-import Gear from '../Gear'
+// import Gear from '../Gear'
 
 class App extends React.Component {
   constructor(props) {
