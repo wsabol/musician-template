@@ -7,7 +7,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-grid-gallery": "^0.5.5",
-    "react-scripts": "^3.4.4",
+    "react-scripts": "^5.0.1",
     "react-sound": "^1.2.0",
     "velocity-react": "^1.4.3"
   },
